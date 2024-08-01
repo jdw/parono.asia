@@ -1,31 +1,42 @@
 <!-- original file: root/__assets/indexes/standard.html -->
 <html>
     <head>
-        <link rel="alternate" type="application/rss+xml" title="feed propelling agency" href="/rss.xml" />
+        <link rel="alternate" type="application/rss+xml" title="Paronomasia: A wondrous way of wyrd!" href="/rss.xml" />
         <link rel="stylesheet" href="/__assets/main.css">
         <script src="/__assets/main.js"></script>
         <script src="/__assets/showdown.js"></script>
         <script>
             var js = document.createElement("script");
-            js.src = window.location.pathname + "/index.js"
+            js.src = (window.location.pathname == "/")? "/index.js": window.location.pathname + "/index.js"
             document.head.appendChild(js);
         </script>
     </head>
 
     <body>
         <div id="header">
-            <!-- header magix -->
-        </div>
-        <div id="ebm">
-            <!-- Body 1 magix -->
+            <!-- STRMAGIX:header -->
         </div>
 
-        <div id="ebm2">
-            <!-- Body 2 magix -->
+        <div class="content" id="ingress-div">
+            <pre id="ingress-pre">
+<!-- STRMAGIX:ingress -->
+            </pre>
+        </div>
+
+        <div class="content" id="main-div">
+            <pre id="main-pre">
+<!-- STRMAGIX:main -->
+            </pre>
+        </div>
+
+        <div class="content" id="addendum-div">
+            <pre id="addendum-pre">
+<!-- STRMAGIX:addendum -->
+            </pre>
         </div>
 
         <div id="footer">
-            <!-- footer magix -->
+            <!-- STRMAGIX:footer -->
         </div>
     </body>
 </html>

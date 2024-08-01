@@ -16,24 +16,25 @@ fun main() {
 
                 File("root").walk().forEach { item ->
                     if (item.endsWith(".settings/index")) {
-                        val indexFile = item.readText()
+                        val indexTemplateData = File(item.readText()).readText()
                         val headerData = File("root/__assets/header.html").readText()
                         val footerData = File("root/__assets/footer.html").readText()
-                        val sourceData = File(indexFile)
-                            .readText()
-                            .replace("<!-- header magix -->", headerData)
-                            .replace("<!-- footer magix -->", footerData)
-                        val destFilename = item.absolutePath.replace(".settings/index", "index.html")
+                        val destinationFilename = item.absolutePath.replace(".settings/index", "index.html")
+                        val ingressMdFilename = item.absolutePath.replace(".settings/index", "ingress.md")
+                        val ingressData = if (File(ingressMdFilename).exists()) File(ingressMdFilename).readText() else ""
+                        val indexMdFilename = item.absolutePath.replace(".settings/index", "index.md")
+                        val indexData = if (File(ingressMdFilename).exists()) File(indexMdFilename).readText() else ""
+                        val addendumMdFilename = item.absolutePath.replace(".settings/index", "addendum.md")
+                        val addendumData = if (File(addendumMdFilename).exists()) File(addendumMdFilename).readText() else ""
 
+                        val source = indexTemplateData
+                            .replace("<!-- STRMAGIX:header -->", headerData)
+                            .replace("<!-- STRMAGIX:ingress -->", ingressData)
+                            .replace("<!-- STRMAGIX:main -->", indexData)
+                            .replace("<!-- STRMAGIX:addendum -->", addendumData)
+                            .replace("<!-- STRMAGIX:footer -->", footerData)
 
-                        if (destFilename.contains("propelling.agency/")) {
-                            println("Copying $indexFile to ${destFilename.split("propelling.agency/").last()}")
-                        }
-                        else {
-                            println("Copying $indexFile to $destFilename")
-                        }
-
-                        File(destFilename).writeText(sourceData)
+                        File(destinationFilename).writeText(source)
                     }
                 }
             }

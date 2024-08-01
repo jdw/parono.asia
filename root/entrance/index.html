@@ -1,13 +1,13 @@
 <!-- original file: root/__assets/indexes/standard.html -->
 <html>
     <head>
-        <link rel="alternate" type="application/rss+xml" title="feed propelling agency" href="/rss.xml" />
+        <link rel="alternate" type="application/rss+xml" title="Paronomasia: A wondrous way of wyrd!" href="/rss.xml" />
         <link rel="stylesheet" href="/__assets/main.css">
         <script src="/__assets/main.js"></script>
         <script src="/__assets/showdown.js"></script>
         <script>
             var js = document.createElement("script");
-            js.src = window.location.pathname + "/index.js"
+            js.src = (window.location.pathname == "/")? "/index.js": window.location.pathname + "/index.js"
             document.head.appendChild(js);
         </script>
     </head>
@@ -17,7 +17,25 @@
             <p><img src="/__assets/logo.png" alt=""></p>
 <p><a href="/about">about</a> | <a href="/AQAB">AQAB</a> | <a href="/entrance">entrance</a></p>
         </div>
-        <div id="ebm"></div>
+
+        <div class="content" id="ingress-div">
+            <pre id="ingress-pre">
+
+            </pre>
+        </div>
+
+        <div class="content" id="main-div">
+            <pre id="main-pre">
+
+            </pre>
+        </div>
+
+        <div class="content" id="addendum-div">
+            <pre id="addendum-pre">
+
+            </pre>
+        </div>
+
         <div id="footer">
             <p>Copyright: Johannes Alexis Wirde (2024 -)</p>
         </div>

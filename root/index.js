@@ -14,6 +14,6 @@ window.onload = function() {
 			markdown += "[Click]("+item.querySelector("link").innerHTML+") for more!\n"
 		 });
 
-		 render_markdown_from_string(markdown, "ebm");
+		 render_markdown_from_string("# kula\nkaka", "main");
 	  });
 }

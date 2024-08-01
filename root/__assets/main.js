@@ -11,7 +11,7 @@ function render_markdown(file, id) {
 }
 
 function render_markdown_from_string(text, id) {
-	var converter = new showdown.Converter();
+	var converter = new showdown.Converter({tables: true});
 	var html = converter.makeHtml(text);
 	document.getElementById(id).innerHTML = html;
 }
