@@ -6,9 +6,9 @@
         <script src="/__assets/main.js"></script>
         <script src="/__assets/showdown.js"></script>
         <script>
-            window.onload = function() {
-                render_markdown(window.location.pathname + "/index.md", "ebm")
-            }
+            var js = document.createElement("script");
+            js.src = window.location.pathname + "/index.js"
+            document.head.appendChild(js);
         </script>
     </head>
 
@@ -16,7 +16,14 @@
         <div id="header">
             <!-- header magix -->
         </div>
-        <div id="ebm"></div>
+        <div id="ebm">
+            <!-- Body 1 magix -->
+        </div>
+
+        <div id="ebm2">
+            <!-- Body 2 magix -->
+        </div>
+
         <div id="footer">
             <!-- footer magix -->
         </div>

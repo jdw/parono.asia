@@ -6,9 +6,9 @@
         <script src="/__assets/main.js"></script>
         <script src="/__assets/showdown.js"></script>
         <script>
-            window.onload = function() {
-                render_markdown(window.location.pathname + "/index.md", "ebm")
-            }
+            var js = document.createElement("script");
+            js.src = window.location.pathname + "/index.js"
+            document.head.appendChild(js);
         </script>
     </head>
 
@@ -18,6 +18,7 @@
 <p><a href="/about">about</a> | <a href="/AQAB">AQAB</a> | <a href="/entrance">entrance</a></p>
         </div>
         <div id="ebm"></div>
+        <div id="instructions"></div>
         <div id="footer">
             <p>Copyright: Johannes Alexis Wirde (2024 -)</p>
         </div>

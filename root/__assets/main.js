@@ -2,7 +2,7 @@ function render_markdown(file, id) {
 	var req = new XMLHttpRequest();
 	req.onload = function(){
 		var text = this.responseText;
-		var converter = new showdown.Converter();
+		var converter = new showdown.Converter({tables: true});
 		var html = converter.makeHtml(text);
 		document.getElementById(id).innerHTML = html;
 	};
