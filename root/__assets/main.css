@@ -1,0 +1,8 @@
+#header img[src="/__assets/logo.png"] {
+	margin: auto;
+    display: block;
+}
+
+#header p:nth-of-type(2) {
+    text-align: center;
+}

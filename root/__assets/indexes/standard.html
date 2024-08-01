@@ -1,0 +1,24 @@
+<!-- original file: root/__assets/indexes/standard.html -->
+<html>
+    <head>
+        <link rel="alternate" type="application/rss+xml" title="feed propelling agency" href="/rss.xml" />
+        <link rel="stylesheet" href="/__assets/main.css">
+        <script src="/__assets/main.js"></script>
+        <script src="/__assets/showdown.js"></script>
+        <script>
+            window.onload = function() {
+                render_markdown(window.location.pathname + "/index.md", "ebm")
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="header">
+            <!-- header magix -->
+        </div>
+        <div id="ebm"></div>
+        <div id="footer">
+            <!-- footer magix -->
+        </div>
+    </body>
+</html>

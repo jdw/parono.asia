@@ -1,0 +1,1 @@
+* [copy index files](/scripts/copy-index-files)

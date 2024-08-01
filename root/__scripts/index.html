@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="/__assets/main.js"></script>
+        <script src="/__assets/showdown.js"></script>
+        <script>
+            window.onload = function() {
+                console.log(window.location)
+                if (window.location.hostname == "0.0.0.0") {
+                    render_markdown(window.location.pathname + "/index.md", "ebm");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="header"></div>
+        <div id="ebm"></div>
+        <div id="footer"></div>
+    </body>
+</html>

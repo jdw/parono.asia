@@ -1,0 +1,42 @@
+<!-- original file: root/__assets/indexes/feed.html -->
+<html>
+    <head>
+        <link rel="alternate" type="application/rss+xml" title="feed propelling agency" href="/rss.xml" />
+        <link rel="stylesheet" href="/__assets/main.css">
+        <script src="/__assets/main.js"></script>
+        <script src="/__assets/showdown.js"></script>
+        <script>
+            window.onload = function() {
+                fetch(window.location.href + "rss.xml")
+                  .then(response => response.text())
+                  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+                  .then(data => {
+                     console.log(data);
+                     const items = data.querySelectorAll("item");
+                     let markdown = "";
+
+                     items.forEach(item => {
+                        markdown += "## " + item.querySelector("title").innerHTML + "\n";
+                        markdown += "    " + item.querySelector("pubDate").innerHTML + "\n\n";
+                        markdown += item.querySelector("description").innerHTML + "\n\n";
+                        markdown += "[Click]("+item.querySelector("link").innerHTML+") for more!\n"
+                     });
+
+                     render_markdown_from_string(markdown, "ebm");
+                  });
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <p><img src="/__assets/logo.png" alt=""></p>
+<p><a href="/about">about</a> | <a href="/AQAB">AQAB</a> | <a href="/projects">projects</a></p>
+        </div>
+        <div id="ebm"></div>
+        <div id="footer">
+            <p>Copyright: Johannes Alexis Wirde (2024 -)</p>
+        </div>
+    </body>
+</html>
