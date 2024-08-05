@@ -16,4 +16,6 @@ window.onload = function() {
 
 		 render_markdown_from_string(markdown, "main-div");
 	  });
+
+	  render_markdown_from_string(document.getElementById("addendum-pre").innerText, "addendum-div");
 }
