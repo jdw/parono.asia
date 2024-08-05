@@ -6,3 +6,28 @@
 #header p:nth-of-type(2) {
     text-align: center;
 }
+
+#thedailyalexis {
+	text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+div.content {
+    align-content: center;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
