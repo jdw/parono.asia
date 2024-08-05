@@ -1,3 +1,5 @@
+
+---
 ## Instructions
 Send in your favourites found in the wild by directing an email formulated as such:
 
@@ -10,3 +12,5 @@ Send in your favourites found in the wild by directing an email formulated as su
 
 If the inquiry is formulated properly according to our quality assurance team
 the [RSS feed](/AQAB/rss.xml) and accumulation will be updated promptly.
+
+---
