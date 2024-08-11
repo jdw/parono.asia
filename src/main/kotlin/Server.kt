@@ -78,10 +78,10 @@ fun main() {
 
                     var itemsXml = ""
                     rssItems.sortedBy { it["title"] }.forEach { item ->
-                        itemsXml += "<item>"
-                        listOf("title", "description", "pubDate", "link").forEach {  itemsXml += "  <$it>${item[it]}</$it>" }
+                        itemsXml += "<item>\n"
+                        listOf("title", "description", "pubDate", "link").forEach {  itemsXml += "\t<$it>${item[it]}</$it>\r" }
 
-                        itemsXml += "</item>"
+                        itemsXml += "</item>\n"
                     }
 
                     val feed = File("root/daily-alexis/__assets/rss-base.xml").readText().replace("<!-- ITEMS STRMAGIX -->", itemsXml)

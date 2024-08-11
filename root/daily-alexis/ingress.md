@@ -1,1 +1,1 @@
-# The Daily Alexis
+# Daily Alexis

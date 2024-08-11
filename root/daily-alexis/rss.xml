@@ -6,6 +6,12 @@
         <language>en-us</language>
         <pubDate>Wed, 1 Aug 2024 18:00:37 GMT</pubDate>
 
-        <item>  <title>2024-08-01, #: 1</title>  <description>description 1</description>  <pubDate>Wed, 1 Aug 2024 20:40:00 GMT</pubDate>  <link>https://parono.asia/daily-alexis/entry/2024-08-01/1</link></item><item>  <title>2024-08-03, #: 1</title>  <description>description 2</description>  <pubDate>Wed, 3 Aug 2024 18:40:00 GMT</pubDate>  <link>https://parono.asia/daily-alexis/entry/2024-08-03/1</link></item><item>  <title>2024-08-03, #: 2</title>  <description>Here we are with entry number 3</description>  <pubDate>Wed, 3 Aug 2024 20:40:00 GMT</pubDate>  <link>https://parono.asia/daily-alexis/entry/2024-08-03/2</link></item>
+        <item>
+	<title>2024-08-01, #: 1</title>	<description>description 1</description>	<pubDate>Wed, 1 Aug 2024 20:40:00 GMT</pubDate>	<link>https://parono.asia/daily-alexis/entry/2024-08-01/1</link></item>
+<item>
+	<title>2024-08-03, #: 1</title>	<description>description 2</description>	<pubDate>Wed, 3 Aug 2024 18:40:00 GMT</pubDate>	<link>https://parono.asia/daily-alexis/entry/2024-08-03/1</link></item>
+<item>
+	<title>2024-08-03, #: 2</title>	<description>Here we are with entry number 3</description>	<pubDate>Wed, 3 Aug 2024 20:40:00 GMT</pubDate>	<link>https://parono.asia/daily-alexis/entry/2024-08-03/2</link></item>
+
     </channel>
 </rss>
